@@ -1,6 +1,7 @@
 {
   "dataMakanan": [
     {
+      "id": "1",
       "nama": "Nasi Gandul",
       "gambar": "https://www.linkpicture.com/q/nasigandul.jpg",
       "daerah": "Pati",
@@ -8,6 +9,7 @@
       "detail": "Nasi Gandul atau Sego Gandul (bahasa Jawa: Sega gandhul) adalah masakan khas yang berasal dari daerah Pati, Jawa Tengah, Indonesia yang sepintas mirip dengan Semur Daging dan Gulai. Nasi gandul sepintas mirip dengan perpaduan soto dan gule, berupa daging yang dengan kuah yang berwarna kecoklatan dengan rasa gurih manis"
     },
     {
+      "id": "2",
       "nama": "Mangut Ndas Manyung",
       "daerah": "Pati",
       "harga": "Rp 15.000",
@@ -15,6 +17,7 @@
       "gambar": "https://www.linkpicture.com/q/Mangut_Ndas_Manyung.jpg"
     },
     {
+      "id": "3",
       "nama": "Soto Kemiri",
       "daerah": "Pati",
       "harga": "Rp 12.000",
@@ -22,6 +25,7 @@
       "gambar": "https://www.linkpicture.com/q/Soto-Kemiri.jpg"
     },
     {
+      "id": "4",
       "nama": "Petis Kambing Runting",
       "daerah": "Pati",
       "harga": "Rp 20.000",
@@ -29,6 +33,7 @@
       "gambar": "https://www.linkpicture.com/q/petis-kambing.jpg"
     },
     {
+      "id": "5",
       "nama": "Sego Tewel",
       "daerah": "Pati",
       "harga": "Rp 10.000",
@@ -36,6 +41,7 @@
       "gambar": "https://www.linkpicture.com/q/sego-tewel.jpg"
     },
     {
+      "id": "6",
       "nama": "Botok Masin",
       "daerah": "Pati",
       "harga": "Rp 12.000",
@@ -43,6 +49,7 @@
       "gambar": "https://www.linkpicture.com/q/botok-masin.jpg"
     },
     {
+      "id": "7",
       "nama": "Tempe Semangit",
       "daerah": "Pati",
       "harga": "Rp 11.000",

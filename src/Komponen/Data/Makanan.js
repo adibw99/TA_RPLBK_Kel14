@@ -20,8 +20,16 @@ export default class Makanan extends Component {
       daerah: '',
       harga: '',
       detail: '',
+      id: '',
     };
   }
+
+  handleId = (e) => {
+    this.setState({
+      id: e.target.value,
+    });
+    console.log(this.state.id);
+  };
 
   handleNama = (e) => {
     this.setState({
@@ -80,27 +88,29 @@ export default class Makanan extends Component {
       <div>
         {this.state.makanan.map((results, index) => {
           return (
-            <div>
+            <>
               <Row xs={1} md={3} className="g-10">
                 {Array.from({ length: 1 }).map((_, idx) => (
-                  <Col>
-                    <Card className="text-white" key={results._id} style={{ width: '18rem' }}>
-                      <Card.Img src={results.gambar} alt="Card image" width={210} height={175} />
-                      <Card.ImgOverlay>
-                        <Card.Title className="mb-2 h2">{results.nama}</Card.Title>
-                        {/* <Card.Text className="mb-2 ">{results.daerah}</Card.Text> */}
-                        <Card.Text className="mb-2 ">{results.harga}</Card.Text>
+                  <div key={results.id}>
+                    <Col key={idx}>
+                      <Card className="text-white" key={results.id} style={{ width: '18rem' }}>
+                        <Card.Img src={results.gambar} alt="Card image" width={210} height={175} />
+                        <Card.ImgOverlay>
+                          <Card.Title className="mb-2 bg-success ">{results.nama}</Card.Title>
+                          {/* <Card.Text className="mb-2 ">{results.daerah}</Card.Text> */}
+                          <Card.Text className="mb-2 bg-dark">{results.harga}</Card.Text>
 
-                        <Card.Footer>
-                          <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
-                        </Card.Footer>
-                      </Card.ImgOverlay>
-                    </Card>
-                  </Col>
+                          <Card.Footer>
+                            <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
+                          </Card.Footer>
+                        </Card.ImgOverlay>
+                      </Card>
+                    </Col>
+                  </div>
                 ))}
               </Row>
               <br />
-            </div>
+            </>
           );
         })}
       </div>
@@ -112,7 +122,7 @@ function MakananDetail(props) {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const { nama, daerah, harga, detail, gambar } = props;
+  const { id, nama, daerah, harga, detail, gambar } = props;
 
   var userDetailContext = createContext(null);
 
@@ -121,7 +131,7 @@ function MakananDetail(props) {
   });
   return (
     <>
-      <userDetailContext.Provider>
+      <userDetailContext.Provider key={id}>
         <Button variant="primary" onClick={handleShow}>
           Detail
         </Button>
