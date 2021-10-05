@@ -1,0 +1,53 @@
+{
+  "dataMakanan": [
+    {
+      "nama": "Nasi Gandul",
+      "gambar": "https://www.linkpicture.com/q/nasigandul.jpg",
+      "daerah": "Pati",
+      "harga": "Rp 14.000",
+      "detail": "Nasi Gandul atau Sego Gandul (bahasa Jawa: Sega gandhul) adalah masakan khas yang berasal dari daerah Pati, Jawa Tengah, Indonesia yang sepintas mirip dengan Semur Daging dan Gulai. Nasi gandul sepintas mirip dengan perpaduan soto dan gule, berupa daging yang dengan kuah yang berwarna kecoklatan dengan rasa gurih manis"
+    },
+    {
+      "nama": "Mangut Ndas Manyung",
+      "daerah": "Pati",
+      "harga": "Rp 15.000",
+      "detail": "Mangut Ndas Manyung adalah masakan khas daerah Kabupaten Pati dari khas Kecamatan Juwana. Bagi yang gemar menyantap makanan pedas bisa mencoba Mangut Ndas Manyung. Pasalnya, olahan masakan berbahan dasar Ndas Manyung (kepala ikan manyung) itu memiliki rasa sangat pedas.",
+      "gambar": "https://www.linkpicture.com/q/Mangut_Ndas_Manyung.jpg"
+    },
+    {
+      "nama": "Soto Kemiri",
+      "daerah": "Pati",
+      "harga": "Rp 12.000",
+      "detail": "Masyarakat Pati selalu memakan soto kemiri di siang hari ketika istirahat cocok tanam di sawah. Karena dulu masyarakat Pati kebanyakan adalah orang kurang mampu sehingga mereka tidak bisa membeli daging atau ayam, maka rakyat pati membuat soto dengan kemiri (sebagai pengganti daging atau ayam)",
+      "gambar": "https://www.linkpicture.com/q/Soto-Kemiri.jpg"
+    },
+    {
+      "nama": "Petis Kambing Runting",
+      "daerah": "Pati",
+      "harga": "Rp 20.000",
+      "detail": "Petis yang satu ini merupakan variasi masakan daging kambing yang hampir sama dengan gulai. Perbedaanya, petis kambing dicampur tepung beras dan rebusan daging. Sekilas, menu ini seperti gulai, kuahnya sedikit gelap. Ada beberapa potong bagian kambing yang menyembul di kuah, tetapi kebanyakan gajih atau lemak serta tulang kambing.",
+      "gambar": "https://www.linkpicture.com/q/petis-kambing.jpg"
+    },
+    {
+      "nama": "Sego Tewel",
+      "daerah": "Pati",
+      "harga": "Rp 10.000",
+      "detail": "Sego Tewel adalah masakan[1] khas dari Kabupaten Pati yang terbuat dari tewel atau nangka muda dimasak dengan santan sebagai kuah sayur. Sayur tewel banyak dijumpai di Tambakromo dan Margorejo. Karena ada 2 khas yaitu Nasi Tewel tambakromo dan Nasi Tewel Margorejo.",
+      "gambar": "https://www.linkpicture.com/q/sego-tewel.jpg"
+    },
+    {
+      "nama": "Botok Masin",
+      "daerah": "Pati",
+      "harga": "Rp 12.000",
+      "detail": "Botok Masin adalah masakan khas Kabupaten Pati yang terbuat dari nasi aking yang diolah dengan cara ditumbuk. Makanan ini umumnya banyak ditemukan di Pati terutama daerah Juwana. Botok masin memiliki cita rasa yang asam, manis dan gurih. Apabila orang tahu bahan dasar membuat botok masin ini, hampir bisa dipastikan tidak ada yang mau memakannya. Karena botok masin dibuat dengan bahan dasar nasi yang segaja dibusukkan.",
+      "gambar": "https://www.linkpicture.com/q/botok-masin.jpg"
+    },
+    {
+      "nama": "Tempe Semangit",
+      "daerah": "Pati",
+      "harga": "Rp 11.000",
+      "detail": "Tempe semangit merupakan produk kuliner dari Desa Jontro, Kecamatan Wedarijaksa, Pati, Jateng. Keunikan karya kuliner khas Pati ini terletak pada bahan dasar tempe yang harus sudah hampir basi sebelum dimasak. Tempe semangit memiliki rasa yang pedas dipadukan dengan kuah santan dan rempah-rempah yang kuat. ",
+      "gambar": "https://www.linkpicture.com/q/tempe-semangit.jpg"
+    }
+  ]
+}
