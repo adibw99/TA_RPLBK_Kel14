@@ -8,6 +8,9 @@ import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import { Container } from 'react-bootstrap';
+import { Home } from '../home';
+import { Switch, Route } from 'react-router-dom';
 
 export default class Makanan extends Component {
   constructor(props) {
@@ -81,36 +84,67 @@ export default class Makanan extends Component {
       .catch((error) => {
         console.log(error);
       });
+    alert(`Menampilkan Daftar Makanan`);
   }
 
+  state = {
+    komponen1: false,
+  };
+
+  shouldComponentUpdate(nextProps, nextState, nextContext) {
+    return window.confirm('Apakah Anda yakin?');
+  }
+
+  ubahkomponen1 = () => {
+    this.setState((state) => {
+      return { komponen1: !this.state.komponen1 };
+    });
+  };
+  componentWillUnmount() {
+    alert('Daftar Makanan Disembunyikan');
+  }
   render() {
     return (
       <div>
+        <div>
+          <br />
+          <Button variant="outline-warning" href="Makanan" onClick={this.ubahkomponen1} href="/">
+            {this.state.komponen1 ? 'SHOW ' : 'HIDE '}
+            MAKE AN ACTION
+          </Button>
+          <Switch>
+            <Route path="/" exact component={Home} />
+          </Switch>
+        </div>
         {this.state.makanan.map((results, index) => {
           return (
-            <>
-              <Row xs={1} md={3} className="g-10">
-                {Array.from({ length: 1 }).map((_, idx) => (
-                  <div key={results.id}>
-                    <Col key={idx}>
-                      <Card className="text-white" key={results.id} style={{ width: '18rem' }}>
-                        <Card.Img src={results.gambar} alt="Card image" width={210} height={175} />
-                        <Card.ImgOverlay>
-                          <Card.Title className="mb-2 bg-success ">{results.nama}</Card.Title>
-                          {/* <Card.Text className="mb-2 ">{results.daerah}</Card.Text> */}
-                          <Card.Text className="mb-2 bg-dark">{results.harga}</Card.Text>
+            <div>
+              <div>
+                <br />
+                <Container>
+                  <Row xs={1} md={3} className="g-10">
+                    {Array.from({ length: 3 }).map((_, idx) => (
+                      <Col justifyContent="center">
+                        <Card className="text-white " key={results.id} style={{ width: '18rem' }} justifyContent="center">
+                          <Card.Img src={results.gambar} alt="Card image" width={210} height={170} />
+                          <Card.ImgOverlay>
+                            <Card.Title className="mb-2 bg-success ">{results.nama}</Card.Title>
+                            {/* <Card.Text className="mb-2 ">{results.daerah}</Card.Text> */}
+                            <Card.Text className="mb-2 bg-dark">{results.harga}</Card.Text>
 
-                          <Card.Footer>
-                            <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
-                          </Card.Footer>
-                        </Card.ImgOverlay>
-                      </Card>
-                    </Col>
-                  </div>
-                ))}
-              </Row>
-              <br />
-            </>
+                            <Card.Footer>
+                              <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
+                            </Card.Footer>
+                          </Card.ImgOverlay>
+                        </Card>
+                      </Col>
+                    ))}
+                  </Row>
+                  <br />
+                </Container>
+                <br />
+              </div>
+            </div>
           );
         })}
       </div>

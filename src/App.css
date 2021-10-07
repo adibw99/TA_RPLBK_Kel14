@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+.Navbar {
+  left: 1px;
+  top: 10px;
+  bottom: 20px;
+
+  /* background-color: rgb(255, 255, 255); */
+  background: rgba(214, 214, 214, 0.404);
+  border-radius: 15px;
+}
+
+.text-navbar {
+  font-size: 20px;
+}
+
+.body-4 {
+  color: rgb(0, 0, 0);
+  background: rgba(255, 255, 0, 0.596);
+}
+
+.body-5 {
+  color: rgb(0, 0, 0);
+  background: yellow;
+}
+
+.nav-a {
+  color: #030e11;
+  font-style: normal;
+}

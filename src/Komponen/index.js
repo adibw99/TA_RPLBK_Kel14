@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import Makanan from './Data/Makanan';
-
+import { Button } from 'react-bootstrap';
 class Index extends Component {
   componentDidMount() {
     alert(`Menampilkan Daftar Makanan`);
@@ -8,13 +8,14 @@ class Index extends Component {
   componentWillUnmount() {
     alert('Daftar Makanan Disembunyikan');
   }
+
   render() {
     return (
       <div>
-        <h4>Daftar Makanan Kota Pati</h4>
         <Makanan />
       </div>
     );
   }
 }
+
 export default Index;

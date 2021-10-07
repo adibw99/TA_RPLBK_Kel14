@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import React from 'react';
 import Index from './index';
+import { Button } from 'react-bootstrap';
 
 class Detail extends Component {
   state = {
@@ -21,9 +22,10 @@ class Detail extends Component {
     return (
       <div>
         {this.state.komponen1 ? <Index /> : ''}
-        <button className="button bg-danger" onClick={this.ubahkomponen1}>
-          {this.state.komponen1 ? 'Sembunyikan' : 'Tampilkan'} Data Makanan
-        </button>
+        <Button variant="outline-warning" href="Makanan" onClick={this.ubahkomponen1}>
+          {this.state.komponen1 ? 'HIDE ' : 'SHOW '}
+          MAKE AN ACTION
+        </Button>
       </div>
     );
   }
