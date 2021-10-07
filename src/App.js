@@ -26,7 +26,7 @@ function App() {
             <Container height="5000">
               <Navbar.Brand href="">
                 <img src="https://www.linkpicture.com/q/logo-makanan-1.png" width="80" height="50" className="d-inline-block align-top" alt="React Bootstrap logo" />
-                <h5>Makanan Daerah Pati</h5>
+                <h5 className="logo-text">Makanan Daerah Pati</h5>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
