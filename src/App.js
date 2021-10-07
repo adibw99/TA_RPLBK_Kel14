@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
-import Detail from './Komponen/detail';
 import { Container } from 'react-bootstrap';
 import { Navbar, Nav } from 'react-bootstrap';
-import Index from './Komponen';
 import Makanan from './Komponen/Data/Makanan';
 import { Home } from './Komponen/home';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,7 +23,7 @@ function App() {
           <Navbar collapseOnSelect className="Navbar " expand="lg" sticky="top">
             <Container height="5000">
               <Navbar.Brand href="">
-                <img src="https://www.linkpicture.com/q/logo-makanan-1.png" width="80" height="50" className="d-inline-block align-top" alt="React Bootstrap logo" />
+                <img href="/" src="https://www.linkpicture.com/q/logo-makanan-1.png" width="80" height="50" className="d-inline-block align-top" alt="React Bootstrap logo" />
                 <h5 className="logo-text">Makanan Daerah Pati</h5>
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
