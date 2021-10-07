@@ -108,7 +108,6 @@ export default class Makanan extends Component {
       <div>
         <div>
           <br />
-
           <Button variant="outline-warning" href="Makanan" onClick={this.ubahkomponen1} href="/">
             {this.state.komponen1 ? 'SHOW ' : 'HIDE '}
             MAKE AN ACTION
