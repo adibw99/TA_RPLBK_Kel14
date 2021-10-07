@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
-import { useState, createContext, useEffect } from 'react';
+import { useState, createContext, useEffect, useContext } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
@@ -11,6 +11,7 @@ import Col from 'react-bootstrap/Col';
 import { Container } from 'react-bootstrap';
 import { Home } from '../home';
 import { Switch, Route } from 'react-router-dom';
+// import Detail from '../detail';
 
 export default class Makanan extends Component {
   constructor(props) {
@@ -115,6 +116,7 @@ export default class Makanan extends Component {
           <Switch>
             <Route path="/" exact component={Home} />
           </Switch>
+          {/* <Detail /> */}
         </div>
         {this.state.makanan.map((results, index) => {
           return (
@@ -123,8 +125,8 @@ export default class Makanan extends Component {
                 <br />
                 <Container>
                   <Row xs={1} md={3} className="g-10">
-                    {Array.from({ length: 3 }).map((_, idx) => (
-                      <Col justifyContent="center">
+                    <Col justifyContent="center">
+                      {Array.from({ length: 1 }).map((_, idx) => (
                         <Card className="text-white " key={results.id} style={{ width: '18rem' }} justifyContent="center">
                           <Card.Img src={results.gambar} alt="Card image" width={210} height={170} />
                           <Card.ImgOverlay>
@@ -137,8 +139,8 @@ export default class Makanan extends Component {
                             </Card.Footer>
                           </Card.ImgOverlay>
                         </Card>
-                      </Col>
-                    ))}
+                      ))}
+                    </Col>
                   </Row>
                   <br />
                 </Container>
@@ -163,6 +165,7 @@ function MakananDetail(props) {
   useEffect(() => {
     document.title = `${nama}`;
   });
+
   return (
     <>
       <userDetailContext.Provider key={id}>

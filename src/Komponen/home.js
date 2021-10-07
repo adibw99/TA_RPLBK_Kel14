@@ -2,8 +2,12 @@ import Container from 'react-bootstrap/Container';
 import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Detail from './detail';
+import { useContext, createContext } from 'react';
 
+const Context = createContext('Default Value');
 export function Home() {
+  const value = 'Muhammad Adib Bowo L  ';
+  const value1 = 'Khoirunnisa Ayu H';
   return (
     <Container>
       <br />
@@ -43,9 +47,13 @@ export function Home() {
               <Card.Title>
                 KELOMPOK 14
                 <br />
-                Muhammad Adib Bowo L
+                <Context.Provider value={value}>
+                  <MyComponent />
+                </Context.Provider>
                 <br />
-                Khoirunnisa Ayu Handayani
+                <Context.Provider value={value1}>
+                  <MyComponent1 />
+                </Context.Provider>
               </Card.Title>
             </Card.Body>
           </Card>
@@ -55,4 +63,16 @@ export function Home() {
       <br />
     </Container>
   );
+}
+
+function MyComponent() {
+  const value = useContext(Context);
+
+  return <span>{value}</span>;
+}
+
+function MyComponent1() {
+  const value1 = useContext(Context);
+
+  return <span>{value1}</span>;
 }

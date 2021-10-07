@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import { Container } from 'react-bootstrap';
@@ -20,7 +20,7 @@ function App() {
       </header> */}
       <BrowserRouter>
         <Container>
-          <Navbar collapseOnSelect className="Navbar " expand="lg" sticky="top">
+          <Navbar collapseOnSelect className="Navbar " expand="lg">
             <Container height="5000">
               <Navbar.Brand href="/">
                 <img src="https://www.linkpicture.com/q/logo-makanan-1.png" width="80" height="50" className="d-inline-block align-top" alt="React Bootstrap logo" />
