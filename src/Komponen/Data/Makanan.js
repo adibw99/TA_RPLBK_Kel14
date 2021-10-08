@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'antd/dist/antd.css';
-import { useState, createContext, useEffect, useContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
@@ -11,6 +11,8 @@ import Col from 'react-bootstrap/Col';
 import { Container } from 'react-bootstrap';
 import { Home } from '../home';
 import { Switch, Route } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Box } from '@material-ui/core';
 // import Detail from '../detail';
 
 export default class Makanan extends Component {
@@ -109,46 +111,45 @@ export default class Makanan extends Component {
       <div>
         <div>
           <br />
-          <Button variant="outline-warning" href="Makanan" onClick={this.ubahkomponen1} href="/">
+          <br />
+          <Button variant="outline-warning" onClick={this.ubahkomponen1} href="/">
             {this.state.komponen1 ? 'SHOW ' : 'HIDE '}
             MAKE AN ACTION
           </Button>
           <Switch>
             <Route path="/" exact component={Home} />
           </Switch>
-          {/* <Detail /> */}
         </div>
-        {this.state.makanan.map((results, index) => {
-          return (
-            <div>
-              <div>
-                <br />
-                <Container>
-                  <Row xs={1} md={3} className="g-10">
-                    <Col justifyContent="center">
-                      {Array.from({ length: 1 }).map((_, idx) => (
-                        <Card className="text-white " key={results.id} style={{ width: '18rem' }} justifyContent="center">
-                          <Card.Img src={results.gambar} alt="Card image" width={210} height={170} />
-                          <Card.ImgOverlay>
-                            <Card.Title className="mb-2 bg-success ">{results.nama}</Card.Title>
-                            {/* <Card.Text className="mb-2 ">{results.daerah}</Card.Text> */}
-                            <Card.Text className="mb-2 bg-dark">{results.harga}</Card.Text>
 
-                            <Card.Footer>
-                              <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
-                            </Card.Footer>
-                          </Card.ImgOverlay>
-                        </Card>
-                      ))}
-                    </Col>
-                  </Row>
+        <Container>
+          <Row container xs={3} md={12} spacing={4} style={{ marginTop: '10px', marginLeft: 'auto', marginRight: 'auto' }}>
+            {this.state.makanan.map((results) => {
+              return (
+                <>
+                  <Box display="flex" justifyContent="center" key={results.id} md={4} style={{ marginTop: '20px', marginLeft: 'auto', marginRight: 'auto', marginBottom: '20px' }}>
+                    <Card className="text-white " style={{ width: '16rem', height: '11.2rem' }}>
+                      <Card.Img src={results.gambar} alt="Card image" width={210} height={180} />
+                      <Card.ImgOverlay>
+                        <Card.Title className="mb-2 bg-success ">{results.nama}</Card.Title>
+
+                        <Card.Text className="mb-2 bg-dark">{results.harga}</Card.Text>
+
+                        <Card.Footer>
+                          <MakananDetail nama={results.nama} gambar={results.gambar} daerah={results.daerah} harga={results.harga} detail={results.detail} />
+                        </Card.Footer>
+                      </Card.ImgOverlay>
+                    </Card>
+                    <br />
+                  </Box>
                   <br />
-                </Container>
-                <br />
-              </div>
-            </div>
-          );
-        })}
+                </>
+              );
+            })}
+          </Row>
+
+          <br />
+        </Container>
+        <br />
       </div>
     );
   }
