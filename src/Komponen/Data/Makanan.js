@@ -7,7 +7,6 @@ import Button from 'react-bootstrap/Button';
 import styled from 'styled-components';
 import Card from 'react-bootstrap/Card';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import { Container } from 'react-bootstrap';
 import { Home } from '../home';
 import { Switch, Route } from 'react-router-dom';

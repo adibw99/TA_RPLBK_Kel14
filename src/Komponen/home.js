@@ -52,8 +52,6 @@ export function Home() {
           </Card>
         </CardGroup>
       </footer>
-      <br />
-      <br />
     </Container>
   );
 }
