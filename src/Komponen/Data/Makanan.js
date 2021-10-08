@@ -207,10 +207,10 @@ function Poto(props) {
 }
 
 const Image = styled.img`
-  border: 1px solid #03bfcb;
+  border: 2px solid #03bfcb;
   border-radius: 5%;
   padding: 0px;
   width: 50%;
   height: 10%;
-  margin: 20px;
+  margin: 0% 25% 3% 25%;
 `;
