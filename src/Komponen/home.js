@@ -13,14 +13,7 @@ export function Home() {
       <br />
       <Card className=" bg-light text-Dark ">
         <Card.Img src="https://www.linkpicture.com/q/bg-22g.jpg" alt="Card image" width={400} height={500} />
-        <Card.ImgOverlay>
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
-          <br />
+        <Card.ImgOverlay style={{ marginTop: '15%', marginLeft: '25%', marginRight: '25%' }}>
           <Card.Title className="title-1 ">
             CINTAILAH MAKANAN <span className=" text-warning">DAERAH </span> KALIAN
           </Card.Title>
