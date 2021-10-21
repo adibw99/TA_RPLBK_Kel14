@@ -12,7 +12,7 @@ class Index extends Component {
   render() {
     return (
       <div>
-        <Makanan />
+        <Makanan />        
       </div>
     );
   }

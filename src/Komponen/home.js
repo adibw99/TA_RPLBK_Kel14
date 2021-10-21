@@ -3,11 +3,13 @@ import Card from 'react-bootstrap/Card';
 import CardGroup from 'react-bootstrap/CardGroup';
 import Detail from './detail';
 import { useContext, createContext } from 'react';
+import "./Footer.css";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 const Context = createContext('Default Value');
 export function Home() {
   const value = 'Muhammad Adib Bowo L  ';
-  const value1 = 'Khoirunnisa Ayu H';
+  const value1 = 'Khoirun Nisa Ayu H';
   return (
     <Container>
       <br />
@@ -52,7 +54,37 @@ export function Home() {
           </Card>
         </CardGroup>
       </footer>
+      <div className="footer-distributed">
+            <div className="footer-left">
+                <h3>Masakan<span>pati</span></h3>
+                <p className="footer-company-name">Kelompok 14© 2021</p>
+            </div>
+            <div className="footer-center">
+                <div className="contact"><i className="footer-contacts-icon"><FontAwesomeIcon icon="map-marker"/></i>
+                    <p className="center"><span className="new-line-span">Jalan Sejahtera</span>Pati, Jawa Tengah</p>
+                </div>
+                <div className="contact"><i className="footer-contacts-icon"><FontAwesomeIcon icon="phone"/></i>
+                    <p className="center">+021345678</p>
+                </div>
+                <div className="contact"><i className="footer-contacts-icon"><FontAwesomeIcon icon="envelope"/></i>
+                    <p className="center">kelompok14@gmail.com</p>
+                </div>
+            </div>
+            <div className="footer-right">
+                <p class="footer-company-about">
+                    <span>Tentang Masakan Pati</span>
+                    Masakan pati merupakan masakan yang berasal dari Pati, mempunyai cita rasa yang pastinya cocok untuk lidah lokal maupun mancanegara
+                </p>
+                <div class="footer-icons">
+                    <a href="#"><FontAwesomeIcon icon={['fab', 'facebook']}/></a>
+                    <a href="#"><FontAwesomeIcon icon={['fab', 'twitter']}/></a>
+                    <a href="#"><FontAwesomeIcon icon={['fab', 'line']}/></a>
+                    <a href="#"><FontAwesomeIcon icon={['fab', 'instagram']}/></a>
+                </div>
+            </div>
+        </div>
     </Container>
+      
   );
 }
 
